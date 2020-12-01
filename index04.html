@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Youtube Comment Helper</title>
+		<link rel="stylesheet" href="./distel/styles.css">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		
+		<link rel="stylesheet" type="text/css" href="popout.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		
+		
+	</head>
+
+	<body class="bodywell">
+		<script src="https://connect.facebook.net/zh_TW/sdk.js?hash=976a860bfc9c8d69975f8983fa8fd4fe&amp;ua=modern_es6" async="" crossorigin="anonymous"></script>
+		<script id="facebook-jssdk" src="https://connect.facebook.net/zh_TW/sdk.js"></script>
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-53709812-6"></script>
+		
+		<audio controls autoplay="true" loop="1000" hidden>
+			<source src="12315.mp3"type="audio/mp3">
+		</audio>
+<!--		<title>
+			<thead>
+				<tr>
+					<th>First name</th>
+					<th>Last name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Evan</td>
+					<td>Huang</td>
+				</tr>
+			</tbody>
+		</title>
+-->		
+		
+		<div id="Header">
+			<h1 id="titleground" >Youtube Comment Helper:應用即時資料庫於平台留言整合處理</h1>
+		</div>
+	<!--	
+		<table width="300" height="80">
+　			<tr><td align="center">HTML 水平置中</td></tr>
+		</table>
+		
+	-->	
+		
+		<form>
+		<!--
+			
+			<div style='text-align:right'>account:  <input id=loginAccount type=text     placeholder ="帳號"  style='width:125px'size=16 onkeypress='m_loginEnter(event)'></div>
+			<div style='text-align:right'>password: <input id=loginPasswd  type=password placeholder ="密碼"  style='width:125px'size=16 onkeypress='m_loginEnter(event)'></div>
+			<div style='text-align:right'><input id=chk type=checkbox> 記住登入資訊</div>
+			<div style='text-align:right'>
+				<a href='https://www.nptu.edu.tw/bin/home.php'>忘記密碼</a>
+			</div>
+			
+		-->
+			<div>
+
+
+				
+				<div id="body1" align="left">
+					<font size="4" >Youtube網址 </font>
+					<br>
+					
+					<input class="aa" id=loginAccount type=text   class="txtbox" placeholder="請輸入 youtube 影片網址"  style='width:400px' size=16 onkeypress='m_loginEnter(event)'>
+				
+					<button database="???" type="button" class="btn">抓取YT留言</button>
+				</div>
+				
+				<div class="container">
+					<!--  <a href="https://www.youtube.com"><img src="091102.jpg" hight="50" width="50"></a>  -->
+					<iframe
+					align="right" src="https://www.youtube.com/embed/2thjvsYiIt4" 
+					frameborder="0" allow="accelerometer; autoplay; encrypted-media;
+					gyroscope; picture-in-picture" allowFullScreen="true" class="video">
+					</iframe>
+				</div>
+				
+				<!--
+					<div id="Sidebar">
+					 <a href="https://www.youtube.com"><img src="091102.jpg" hight="50" width="50"></a>  
+					<iframe width="420" height="315" align="right" src="https://www.youtube.com/embed/2thjvsYiIt4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				-->
+			</div>
+			
+			
+			
+		
+		<!--
+			<div style='text-align:right'class="mw-input mw-htmlform-nolabel">
+				<a href="https://classic.minecraft.net/?join=c1gwLEVMYzs5fPbl"><input type="button" value="登入"></a>
+				<input onclick="history.back()" type="button" value="返回">
+			</div>
+		
+		-->
+		
+		</form>	
+	
+		<hr>
+
+
+	<div class="list_area" id="searchsetingground"  id="body">
+		<p dataebase2="" class="title">抓取設定</p>
+		<div database3="" database4="" class="listui">
+			<!--<div database3="" class="title">
+			
+			</div>-->
+				<!--data-v-42d8d0d7  == database3-->
+				<!--data-v-043298fe  == database4-->
+				<!--
+					<div database3="" class="ui time">
+						<div database3="" class="start">
+							活動起始時間
+							<div database3="" class="vdatetime datetime">
+								<input type="text" class="d_input">
+							</div>
+						</div>
+						
+						<div database3="" class="end">
+							活動結束時間
+							<div database3="" class="vdatetime datetime">
+								<input type="text" class="d_input"> 
+							</div>
+						</div>
+					</div>
+				-->
+				<div database3="" class="ui search">
+					<div database3="" class="s_name">
+						搜尋姓名
+						<input database3="" type="text" placeholder="搜尋姓名">
+					</div>
+					
+					<div database3="" class="s_comment">
+						搜尋留言
+						<input database3="" type="text" placeholder="搜尋留言">
+					</div>
+					<!--
+					<div database3="" class="howmany">
+						抓取人數
+						<input database3="" type="number" id="howmany">
+					</div>
+					-->
+					<button database3="" type="button" id="btn_choose" class="btn red">進行抓取</button>
+				</div>
+				
+				<div database3="" class="ui filters">
+					<label database3="" for="unique" class="unique">
+						<input database3="" type="checkbox" id="unique">
+						排除重複留言
+					</label>	
+				</div>
+				
+			</div>
+			
+			
+			
+			<table database4="" class="table table-striped main_table">
+			
+				<thead database4="">
+					<tr database4="">
+						<!--<td database4="" class="center">序號</td>-->
+						<td database4="" width="200" class="orange">名字</td>
+						<td database4="" class="force-break">留言內容</td>
+						<td database4="" class="center">喜歡</td>
+						<td database4="">回覆數</td>
+						<td database4="" class="nowrap">留言時間</td>
+					</tr>
+				</thead>
+				
+				<tbody database4="">
+				
+				</tbody>
+			</table>
+			
+			<div database4="" class="pagers">
+				<div database4="">
+					第 1 筆到第 0 筆，共 0 筆
+				</div>
+			</div>
+			
+		</div>
+
+
+
+		<div id="Sidebar">
+			<hr>
+			<p id="usedground">
+				<big>用途：</big>
+				<br>
+				此網頁是用來展現YouTube留言搜索的功能
+			</p>
+		</div>
+
+
+
+
+		<hr>
+		<div id="ground3">
+			<h2 class="red"><b>About 資訊科學系</b></h2>
+			<ul>
+			<p><li>系必修學分 57</li></p>
+			<p><li>系選修學分 20</li></p>
+			<p><li>自由學分 20</li></p>
+			<p><li>畢業學分 128</li></p>
+			</ul>
+		</div>	
+
+		<form>
+				<input type ="submit" value="top">
+		</form>
+	
+		<!--
+			<p><a href="https://news.tvbs.com.tw/world/1034871"><img src="https://cc.tvbs.com.tw/img/upload/2018/11/23/20181123185500-3f149d33.jpg" hight="550" width="450"></a></p>
+			<br>
+		-->	
+
+		<div class="shadowbox">
+			<div class="photo"><img id="myImg" src=""></div>
+	
+			<div class="intro">
+				<p id="name">綠色</p>
+			</div>
+			<div>
+				<p>留言:</p>
+				<p id="content"></p>
+			</div>
+		</div>
+		<button onclick="fireTest()">測試</button>
+		<button onclick=" firePut()">輸出</button>
+		<img id="myImg" src="">
+		<pre id="content"></pre>
+		<p class="lead">
+			<h2 id="response"></h2>
+		</p>
+	
+	
+		<script src="https://apis.google.com/js/api.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+		<script src="popout.js"></script>
+	</body>
+</html>	
+	
+	

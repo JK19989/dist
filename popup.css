@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&family=Staatliches&display=swap');
+
+body{
+    width:500px;
+    
+}
+
+input[type=url] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://static.runoob.com/images/mix/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=url]:focus {
+    width: 100%;
+  }
+  .word{
+    font-family: 'Grandstander','Staatliches', cursive;
+    
+    font-size:64px;
+    color:#ff8080;
+    
+  }
+  #box1 {
+    background: transparent; 
+    height:0px;
+    width:0px;
+    border-top: 170px solid transparent;
+    border-bottom: 170px solid transparent;
+    border-left: 170px solid #ff0000;
+    border-right: 170px solid transparent;
+   }

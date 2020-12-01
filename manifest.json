@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+
+    "name": "Youtube 留言檢索工具",
+
+    "description": "提供使用者快速找到符合使用者需求的留言",
+
+    "version": "1.0",
+
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8IamDBp8IbsmfKJbI5YsX4exfS7Yp9KHInCpHKMkTVv3GktvjTcQOKdpmYwRKJkOBb0va97C3LlpE+YXw0j8ntHPYZxdptlUdW/Z1abivmKlf8u5NVGohhjmxfhrGkCyWguV97q86BdZ/sXkcWj8TUuz8WSaC5zWdVVfoXR+ZGOuYoP6jR5zW8anzV9MjpfN+RykAwnGpSxb7P6o/Hux9Gd1W3zGVCTfaP4wRBj3AqE1S9vyBrr9TvoKTWssY89/AwMkuOG7Z1v4pf4qcwBUcoJqc2rVu9PPEbu1UcS/KCH2bA+X9SbXdg1canva+ctml7mREcEFGQtDUNVz6SnqSQIDAQAB",
+
+
+
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "identity",
+        "identity.email"
+
+    ],
+    "background": {
+        "scripts": ["./background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "./popup-sign-in.html"
+    },
+    "oauth2": {
+        "client_id": "eokbghjcchdfdngchiaakgijdiagfegl",
+        "scopes": [
+            "profile email",
+            "https://www.googleapis.com/auth/contacts"
+        ]
+    },
+
+    "content_security_policy": "script-src'self'https://www.gstatic.com/ https：//*.firebaseio.com https://www.googleapis.com; object-src'self' ; connect-src'self'wss：//*.firebaseio.com;"
+
+
+
+}
